@@ -14,6 +14,12 @@ fi
 tar -C /usr/local -xzf /tmp/go.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
+# Build scdocs
+git clone https://git.sr.ht/~sircmpwn/scdoc /tmp/scdoc
+cd /tmp/scdoc
+make
+make install
+
 # Clone upstream
 rm -rf /data/upstream
 mkdir -p /data/upstream
@@ -24,8 +30,9 @@ cd /data/upstream
 git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
 
 # Build upstream
-make aerc
+make
+DESTDIR=out make install
 
-# Copy to staging directory
+# Create tar archive in staging directory
 mkdir -p /data/staging
-cp ./aerc /data/staging/aerc-linux.$(uname -m)
+tar -zcvf /data/staging/aerc-linux.$(uname -m).tar.gz out/*
