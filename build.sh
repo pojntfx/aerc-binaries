@@ -35,4 +35,4 @@ DESTDIR=out make install
 
 # Create tar archive in staging directory
 mkdir -p /data/staging
-tar -zcvf /data/staging/aerc-linux.$(uname -m).tar.gz out/*
+tar -zcvf /data/staging/aerc-linux.$(uname -m).tar.gz -C out .

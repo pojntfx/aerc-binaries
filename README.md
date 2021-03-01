@@ -6,13 +6,13 @@ Weekly builds for https://git.sr.ht/~sircmpwn/aerc.
 
 ## Installation
 
-Binaries of the latest release are built weekly and uploaded to [GitHub releases](https://github.com/pojntfx/aerc-binaries/releases).
+Binary packages of the latest release are built weekly and uploaded to [GitHub releases](https://github.com/pojntfx/aerc-binaries/releases).
 
 You can install them like so:
 
 ```shell
-$ curl -L -o /tmp/aerc https://github.com/pojntfx/aerc-binaries/releases/download/latest/aerc-linux.$(uname -m)
-$ sudo install /tmp/aerc /usr/local/bin
+$ curl -L -o /tmp/aerc.tar.gz https://github.com/pojntfx/aerc-binaries/releases/download/latest/aerc-linux.$(uname -m).tar.gz
+$ tar -C / -xzf /tmp/aerc.tar.gz
 ```
 
 ## License
