@@ -2,7 +2,7 @@
 
 Weekly builds for https://git.sr.ht/~sircmpwn/aerc.
 
-![Docker CI](https://github.com/pojntfx/aerc-binaries/workflows/Docker%20CI/badge.svg)
+![hydrun CI](https://github.com/pojntfx/aerc-binaries/workflows/hydrun%20CI/badge.svg)
 
 ## Installation
 
